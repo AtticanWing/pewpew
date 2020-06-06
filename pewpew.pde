@@ -9,8 +9,9 @@ color purple = #490A3D;
 color pink   = #F7B6CE;
 color orange = #F7C489;
 color tan = #F0DE9D;
-color green  = #93D892;
+color green  = #9AE199; //#93D892
 color blue = #B7E3FF;
+color gray = #505050; //#909090 #6C6C6C
 
 //mode framework variables
 final int INTRO    = 0;
@@ -39,6 +40,11 @@ void setup() {
   objects = new ArrayList<GameObject>();
   myPlayer = new Player();
   objects.add(myPlayer);
+  int i = 0;
+  while (i < 75) {
+    objects.add(new Obstacle());
+    i++;
+  }
 }
 
 //##################################### DRAW ################################################
